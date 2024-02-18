@@ -31,5 +31,6 @@ class HomeController extends Controller {
      Future<Response> destroy(int id) async {
           return Response.json({});
      }
-
 }
+
+HomeController homeController = HomeController();
