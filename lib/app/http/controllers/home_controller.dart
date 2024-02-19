@@ -33,4 +33,4 @@ class HomeController extends Controller {
      }
 }
 
-HomeController homeController = HomeController();
+final HomeController homeController = HomeController();

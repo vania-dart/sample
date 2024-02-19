@@ -1,5 +1,5 @@
 import 'package:vania/vania.dart';
-import 'package:vania_sample/app/http/controller/home_controller.dart';
+import 'package:vania_sample/app/http/controllers/home_controller.dart';
 import 'package:vania_sample/app/http/middleware/authenticate.dart';
 import 'package:vania_sample/app/http/middleware/home_middleware.dart';
 
