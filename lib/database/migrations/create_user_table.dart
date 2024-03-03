@@ -5,7 +5,7 @@ class CreateUserTable extends Migration {
   @override
   Future<void> up() async{
     super.up();
-   await createTable('User', () {
+   await createTable('users', () {
       id();
     });
   }
