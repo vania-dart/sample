@@ -2,7 +2,7 @@
 
 import 'package:vania/vania.dart';
 
-CORSConfig cros = CORSConfig(
+CORSConfig cors = CORSConfig(
   /// Enabled
   /// -------------------------------
   /// A boolean to enable or disable CORS integration.
