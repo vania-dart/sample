@@ -14,6 +14,8 @@ Map<String, dynamic> config = {
   'url': '',
   'timezone': '',
   'websocket': false,
+  'isolate': false,
+  'isolateCount': 4,
   'cors': cors,
   'database': null,//databaseConfig,
   'cache': CacheConfig(),
