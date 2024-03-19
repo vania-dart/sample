@@ -27,6 +27,7 @@ Map<String, dynamic> config = {
     'port': 465,
     'username': '',
     'password': '',
+    'accessToken': '',
     'encryption': 'ssl',
     'from_name': '',
     'from_address': ''
