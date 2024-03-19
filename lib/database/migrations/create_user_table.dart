@@ -1,11 +1,10 @@
 import 'package:vania/vania.dart';
 
 class CreateUserTable extends Migration {
-
   @override
-  Future<void> up() async{
+  Future<void> up() async {
     super.up();
-   await createTable('users', () {
+    await createTable('users', () {
       id();
     });
   }

@@ -10,8 +10,8 @@ void main() async {
 }
 
 class Migrate {
-  registry() async{
-		await MigrationConnection().setup(databaseConfig);
-		 await CreateUserTable().up();
-	}
+  registry() async {
+    await MigrationConnection().setup(databaseConfig);
+    await CreateUserTable().up();
+  }
 }

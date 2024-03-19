@@ -17,10 +17,20 @@ Map<String, dynamic> config = {
   'isolate': false,
   'isolateCount': 4,
   'cors': cors,
-  'database': null,//databaseConfig,
+  'database': null, //databaseConfig,
   'cache': CacheConfig(),
-  'auth':authConfig,
+  'auth': authConfig,
   'storage': FileStorageConfig(),
+  'mail': {
+    'driver': 'smtp',
+    'host': '',
+    'port': 465,
+    'username': '',
+    'password': '',
+    'encryption': 'ssl',
+    'from_name': '',
+    'from_address': ''
+  },
   'providers': <ServiceProvider>[
     RouteServiceProvider(),
   ],

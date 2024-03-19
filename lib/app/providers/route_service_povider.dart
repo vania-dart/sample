@@ -1,12 +1,9 @@
-
-
 import 'package:vania/vania.dart';
 import 'package:vania_sample/route/api_route.dart';
 import 'package:vania_sample/route/web.dart';
 import 'package:vania_sample/route/web_socket.dart';
 
-
-class RouteServiceProvider extends ServiceProvider{
+class RouteServiceProvider extends ServiceProvider {
   @override
   Future<void> boot() async {}
 
@@ -16,5 +13,4 @@ class RouteServiceProvider extends ServiceProvider{
     ApiRoute().register();
     WebSocketRoute().register();
   }
-
 }
