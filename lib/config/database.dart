@@ -1,9 +1,10 @@
 import 'package:vania/vania.dart';
 
 DatabaseConfig databaseConfig = DatabaseConfig(
-    driver: MysqlDriver(),
-    host: '127.0.0.1',
-    database: 'vania',
-    username: 'root',
-    password: '123456',
-    port: 3306);
+  driver: MysqlDriver(),
+  host: env('DB_HOST'),
+  port: env('DB_PORT'),
+  database: env('DB_DATABASE'),
+  username: env('DB_USERNAME'),
+  password: env('DB_PASSWORD'),
+);

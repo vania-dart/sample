@@ -6,12 +6,8 @@ import 'cors.dart';
 import 'database.dart';
 
 Map<String, dynamic> config = {
-  'name': 'applicationName',
-  'key': 'applicationKey',
-  'port': 8000,
-  'host': '127.0.0.1',
-  'debug': true,
-  'url': '',
+  'name': env('APP_NAME'),
+  'url': env('APP_URL'),
   'timezone': '',
   'websocket': false,
   'isolate': false,
@@ -22,15 +18,14 @@ Map<String, dynamic> config = {
   'auth': authConfig,
   'storage': FileStorageConfig(),
   'mail': {
-    'driver': 'smtp',
-    'host': '',
-    'port': 465,
-    'username': '',
-    'password': '',
-    'accessToken': '',
-    'encryption': 'ssl',
-    'from_name': '',
-    'from_address': ''
+    'driver':env('MAIL_MAILER'),
+    'host':env('MAIL_HOST'),
+    'port':env('MAIL_PORT'),
+    'username':env('MAIL_USERNAME'),
+    'password':env('MAIL_PASSWORD'),
+    'encryption':env('MAIL_ENCRYPTION'),
+    'from_name':env('MAIL_FROM_NAME'),
+    'from_address':env('MAIL_FROM_ADDRESS'),
   },
   'providers': <ServiceProvider>[
     RouteServiceProvider(),
