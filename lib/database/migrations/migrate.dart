@@ -4,6 +4,7 @@ import '../../config/database.dart';
 import 'create_user_table.dart';
 
 void main() async {
+  Env().load();
   await Migrate().registry();
   await MigrationConnection().closeConnection();
   exit(0);
