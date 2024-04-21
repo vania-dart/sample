@@ -1,32 +1,37 @@
 # Use latest stable channel SDK.
 FROM dart:stable AS build
 
+# Work Directory
+WORKDIR /app
+
+# Resolve app dependencies.
+COPY pubspec.* ./
 
 # Install the Vania cli from pub.dev
 RUN dart pub global activate vania_cli
 
-# Resolve app dependencies.
-WORKDIR /www
-
+# Get dependencies
+RUN dart pub get
 
 # Copy app source code (except anything in .dockerignore) and AOT compile app.
 COPY . .
 
-
-# Get dependencies
-RUN dart pub get
-
 # 📦 Create a production build
+RUN dart pub get --offline
 RUN vania build
 
 # Build minimal serving image from AOT-compiled `/server`
 # and the pre-built AOT-runtime in the `/runtime/` directory of the base image.
 FROM scratch
+
 COPY --from=build /runtime/ /
-COPY --from=build /www/bin/server /bin/
+COPY --from=build /app/bin/server /app/bin/
+
+# Comment the following line if you are not serving static files.
+COPY --from=build /app/public /public/
 
 # Expose the server port (useful for binding)
 EXPOSE 8000
 
 # Start server.
-CMD ["/bin/server"]
+CMD ["/app/bin/server"]
