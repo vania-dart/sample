@@ -18,6 +18,10 @@ COPY . .
 
 # 📦 Create a production build
 RUN dart pub get --offline
+
+# Comment the following line if you don't want to create tables.
+RUN vania migrate
+
 RUN vania build
 
 # Build minimal serving image from AOT-compiled `/server`
@@ -26,6 +30,7 @@ FROM scratch
 
 COPY --from=build /runtime/ /
 COPY --from=build /app/bin/server /app/bin/
+COPY --from=build /app/.env /
 
 # Comment the following line if you are not serving static files.
 COPY --from=build /app/public /public/
