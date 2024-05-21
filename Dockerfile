@@ -29,14 +29,15 @@ RUN vania build
 FROM scratch
 
 COPY --from=build /runtime/ /
-COPY --from=build /app/bin/server /app/bin/
+COPY --from=build /app/bin/server /bin/server
 COPY --from=build /app/.env /
 
 # Comment the following line if you are not serving static files.
 COPY --from=build /app/public /public/
+COPY --from=build /app/storage /storage/
 
 # Expose the server port (useful for binding)
 EXPOSE 8000
 
 # Start server.
-CMD ["/app/bin/server"]
+CMD ["/bin/server"]
