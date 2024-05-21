@@ -17,16 +17,6 @@ Map<String, dynamic> config = {
   'cache': CacheConfig(),
   'auth': authConfig,
   'storage': FileStorageConfig(),
-  'mail': {
-    'driver':env('MAIL_MAILER'),
-    'host':env('MAIL_HOST'),
-    'port':env('MAIL_PORT'),
-    'username':env('MAIL_USERNAME'),
-    'password':env('MAIL_PASSWORD'),
-    'encryption':env('MAIL_ENCRYPTION'),
-    'from_name':env('MAIL_FROM_NAME'),
-    'from_address':env('MAIL_FROM_ADDRESS'),
-  },
   'providers': <ServiceProvider>[
     RouteServiceProvider(),
   ],
