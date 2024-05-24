@@ -14,7 +14,6 @@ Map<String, dynamic> config = {
   'isolateCount': 4,
   'cors': cors,
   'database': null, //databaseConfig,
-  'cache': CacheConfig(),
   'auth': authConfig,
   'storage': FileStorageConfig(),
   'providers': <ServiceProvider>[

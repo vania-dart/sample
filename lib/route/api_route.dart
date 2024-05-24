@@ -17,7 +17,9 @@ class ApiRoute implements Route {
     }).middleware([HomeMiddleware()]);
 
     // Return error code 400
-    Router.get('wrong-request', () => Response.json({'message':'Hi wrong request'})).middleware([ErrorResponseMiddleware()]);
+    Router.get('wrong-request',
+            () => Response.json({'message': 'Hi wrong request'}))
+        .middleware([ErrorResponseMiddleware()]);
 
     // Return Authenticated user data
     Router.get("/user", () {
