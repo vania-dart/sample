@@ -3,7 +3,6 @@ import 'package:vania_sample/app/providers/route_service_povider.dart';
 
 import 'auth.dart';
 import 'cors.dart';
-import 'database.dart';
 
 Map<String, dynamic> config = {
   'name': env('APP_NAME'),
@@ -13,7 +12,6 @@ Map<String, dynamic> config = {
   'isolate': false,
   'isolateCount': 4,
   'cors': cors,
-  'database': null, //databaseConfig,
   'auth': authConfig,
   'storage': FileStorageConfig(),
   'providers': <ServiceProvider>[
