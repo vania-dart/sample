@@ -8,6 +8,8 @@ services:
     restart: always
     volumes:
       - app:/app
+      - ./public:/public
+      - ./storage:/storage
     ports:
       - "8000:8000"
 
