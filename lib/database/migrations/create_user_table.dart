@@ -8,4 +8,10 @@ class CreateUserTable extends Migration {
       id();
     });
   }
+
+    @override
+  Future<void> down() async{
+    super.down();
+    await dropIfExists('users');
+  }
 }
