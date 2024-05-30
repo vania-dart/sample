@@ -6,6 +6,6 @@ class ErrorResponseMiddleware extends Middleware {
     if (req.header('content-type') != 'application/json') {
       abort(400, 'Your request is not valid');
     }
-    next?.handle(req);
+    return next?.handle(req);
   }
 }
