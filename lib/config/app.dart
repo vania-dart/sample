@@ -13,7 +13,6 @@ Map<String, dynamic> config = {
   'isolateCount': 4,
   'cors': cors,
   'auth': authConfig,
-  'storage': FileStorageConfig(),
   'providers': <ServiceProvider>[
     RouteServiceProvider(),
   ],
