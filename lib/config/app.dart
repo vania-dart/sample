@@ -8,9 +8,6 @@ Map<String, dynamic> config = {
   'name': env('APP_NAME'),
   'url': env('APP_URL'),
   'timezone': '',
-  'websocket': false,
-  'isolate': false,
-  'isolateCount': 4,
   'cors': cors,
   'auth': authConfig,
   'providers': <ServiceProvider>[
