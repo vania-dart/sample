@@ -7,7 +7,6 @@ import 'cors.dart';
 Map<String, dynamic> config = {
   'name': env('APP_NAME'),
   'url': env('APP_URL'),
-  'timezone': '',
   'cors': cors,
   'auth': authConfig,
   'providers': <ServiceProvider>[

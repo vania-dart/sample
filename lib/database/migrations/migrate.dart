@@ -18,7 +18,7 @@ class Migrate {
     await CreateUserTable().up();
   }
 
-    dropTables() async {
-		 await CreateUserTable().down();
-	 }
+  dropTables() async {
+    await CreateUserTable().down();
+  }
 }
