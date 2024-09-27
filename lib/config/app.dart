@@ -1,5 +1,5 @@
 import 'package:vania/vania.dart';
-import 'package:vania_sample/app/providers/route_service_povider.dart';
+import 'package:vania_sample/app/providers/route_service_provider.dart';
 
 import 'auth.dart';
 import 'cors.dart';
