@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:vania/vania.dart';
-import 'create_user_table.dart';
+import 'create_users_table.dart';
 
 void main(List<String> args) async {
   await MigrationConnection().setup();
