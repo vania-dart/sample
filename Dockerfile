@@ -28,13 +28,14 @@ RUN vania build
 # and the pre-built AOT-runtime in the `/runtime/` directory of the base image.
 FROM scratch
 
+# Comment the following line if you are not serving static files.
 COPY --from=build /runtime/ /
 COPY --from=build /app/bin/server /bin/server
 COPY --from=build /app/.env /
-
-# Comment the following line if you are not serving static files.
 COPY --from=build /app/public /public/
 COPY --from=build /app/storage /storage/
+COPY --from=build /app/lib/lang /lib/lang
+COPY --from=build /app/lib/resources /lib/resources
 
 # Expose the server port (useful for binding)
 EXPOSE 8000
